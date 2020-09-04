@@ -1,0 +1,214 @@
+.header{
+  padding: 29px 0 5px;
+  .container{
+    display: flex;
+    justify-content: space-between;
+    .nav{
+      margin: 17px 0px 0 0;
+      .icon_menu{
+        width: 24px;
+        height: 12px;
+      }
+      .menu{
+        display: none;
+        position: relative;
+        width: 100%;
+        background: #ffffff;
+        z-index: 2;
+        padding: 10px 0 10px 0;
+        top: 78px;
+        text-align: center;
+        left: 0;
+
+        li{
+          a{
+            color: #1e1e1e;
+            font-family: 'Manrope-Regular';
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 30px;
+            position: relative;
+            &.sub{
+              &:before{
+                content: '\f107';
+                font-family: 'fontello';
+                color: #1e1e1e;
+                position: absolute;
+                right: -17px;
+              }
+
+            }
+          }
+          .submenu{
+            display: none;
+          }
+        }
+        &.active{
+          position: absolute;
+          display: block;
+        }
+      }
+    }
+    .logo{
+      img{
+        width: 145px;
+        height: 68px;
+      }
+    }
+    .tel{
+      cursor: pointer;
+      margin: 22px 17px 0 0;
+      img{
+        width: 21px;
+        height: 21px;
+      }
+      span{
+        display: none;
+        color: #1d1d1d;
+        font-family: 'Manrope-Regular';
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 21.36px;
+      }
+    }
+    .btn{
+      display: none;
+    }
+  }
+}
+@media (min-width: 1280px){
+  .header{
+    padding: 25px 0 10px 0;
+    .container{
+      display: flex;
+      justify-content: space-between;
+      .nav{
+        order: 2;
+        margin:0 0 0 0;
+        .icon_menu{
+          display: none;
+        }
+        .menu{
+         display: flex;
+          position: relative;
+          justify-content: space-between;
+          top:auto;
+          li{
+            margin: 0 25px 0 0;
+            a{
+              color: #1e1e1e;
+              font-family: 'Manrope-Regular';
+              font-size: 15px;
+              font-weight: 500;
+              line-height: 30px;
+              &.sub{
+
+                &:before{
+                  right: -12px;
+                  top: -3px;
+                }
+              }
+            }
+            .submenu{
+              position: absolute;
+              z-index: 2;
+              background: #fff;
+              width: 200px;
+            }
+
+          }
+        }
+      }
+      .logo{
+        order: 1;
+        img{
+          width: 130px;
+          height: auto;
+
+        }
+      }
+      .tel{
+        order: 3;
+        display: flex;
+        margin: 12px 0 0 0;
+        position: relative;
+        img{
+          position: absolute;
+          left: 0;
+          width: 16px;
+          height: 16px;
+          top: 5px;
+        }
+        span{
+          font-size: 16px;
+          display: block;
+          padding: 3px 0 0 20px;
+        }
+      }
+      .btn{
+        display: table;
+        margin: 7px 0 0;
+        border-radius: 35px;
+        order: 4;
+        width: 160px;
+        padding: 8px 0;
+        font-size: 14px;
+
+      }
+    }
+  }
+}
+@media (min-width: 1920px){
+  .header{
+    padding: 22px 0 3px;
+    .container{
+      display: flex;
+      justify-content: space-between;
+      .nav{
+        width: 44%;
+        margin: 17px 250px 0 19px;
+        .icon_menu{
+          display: none;
+        }
+        .menu{
+          display: flex;
+          position: relative;
+          justify-content: space-between;
+          top:auto;
+          li{
+            a{
+              color: #1e1e1e;
+              font-family: 'Manrope-Regular';
+              font-size: 17px;
+              font-weight: 500;
+              line-height: 30px;
+            }
+          }
+        }
+      }
+      .logo{
+        order: 1;
+        margin: 0 0px 0 8px;
+        img{
+          width: 200px;
+          height: 93px;
+        }
+      }
+      .tel{
+        margin: 22px 0px 0 0;
+        span{
+          display: block;
+          margin: 1px 0 0 0px;
+          font-size: 24px;
+        }
+      }
+      .btn{
+        margin: 13px 0 0;
+        border-radius: 35px;
+        width: 204px;
+        padding: 15px 0;
+        font-size: 16px;
+      }
+    }
+  }
+}
