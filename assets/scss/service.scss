@@ -1,0 +1,131 @@
+.wrapper{
+  .service{
+    position: relative;
+    padding: 30px 0 0 0;
+    &:before{
+      content: '';
+      background-color: #000000;
+      width: 100%;
+      height: 456px;
+      top:0;
+      left: 0;
+      position: absolute;
+    }
+    .container{
+      .title{
+        color: #ffffff;
+      }
+      .box{
+        position: relative;
+
+        margin: 0px auto 12px;
+        .top{
+          padding: 132px 745px 45px 37px;
+          span{
+            font-family: 'SpectralSC-Regular';
+            font-size: 100px;
+            font-weight: 500;
+            line-height: 55px;
+            position: absolute;
+            top: 21px;
+            left: 19px;
+            color: #fff;
+            height: 45px;
+            overflow: hidden;
+          }
+          h4{
+            color: #ffffff;
+            font-family: 'SpectralSC-Regular';
+            font-size: 28px;
+            font-weight: 500;
+            line-height: 36px;
+            min-height: 72px;
+          }
+        }
+        .bottom{
+          h4{
+            color: #000000;
+            font-family: 'SpectralSC-Regular';
+            font-size: 28px;
+            font-weight: 500;
+            line-height: 22px;
+          }
+          ul{
+            margin: 38px 0 10px 0;
+            li{
+              margin: 0 0 11px 0;
+
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+@media (min-width: 1280px){
+  .wrapper{
+    .service{
+      .container{
+        .title{
+          color: #ffffff;
+          padding: 36px 0 46px 0;
+          font-size: 71px;
+        }
+        .box{
+          position: relative;
+
+          margin: 0px auto 12px;
+          .top{
+            padding: 132px 745px 45px 37px;
+            width: 1140px;
+            span{
+              font-family: 'SpectralSC-Regular';
+              font-size: 120px;
+              font-weight: 500;
+              line-height: 80px;
+              position: absolute;
+              top: 65px;
+              left: 39px;
+              overflow: hidden;
+              height: 56px;
+              color: #fff;
+            }
+            h4{
+              font-size: 34px;
+            }
+          }
+          .bottom{
+            padding: 60px 0 0 24px;
+            h4{
+              color: #000000;
+              font-family: 'SpectralSC-Regular';
+              font-size: 28px;
+              font-weight: 500;
+              line-height: 22px;
+              padding: 10px 0 10px 0;
+            }
+            ul{
+              display: flex;
+              margin: 0;
+              flex-wrap: wrap;
+              padding: 13px 0 5px 0;
+              li{
+                margin: 0 0 11px 0;
+                width: 33%;
+                .link2{
+                  font-size: 19px;
+                }
+
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+}
+@media (min-width: 1920px){
+
+}
