@@ -257,8 +257,6 @@ h4 {
         font-family: 'fontello';
         font-size: 24px;
         position: absolute;
-        bottom: 5px;
-        left: 5px;
         width: 26px;
         height: 26px;
         content: '\e800';
@@ -268,6 +266,9 @@ h4 {
         text-align: center;
         line-height: 26px;
         border: 1px solid #1c1c1c;
+        left: 0px;
+        top: 50%;
+        transform: translate(0px, -50%);
     }
 }
 .link2{

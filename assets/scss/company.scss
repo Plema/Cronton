@@ -1,6 +1,7 @@
 .wrapper{
   .banner{
     position: relative;
+    padding: 30px 0 0 0;
     &::before{
       content: '';
       position: absolute;
@@ -12,30 +13,40 @@
     }
     .container{
       h1{
-        color: #ffffff;
         font-family: 'SpectralSC-Regular';
-        font-size: 72px;
+        font-size: 36px;
         font-weight: 500;
-        line-height: 68px;
+        line-height: 36px;
+        color: #fff;
+        margin: 6px 0 18px 0;
       }
-      .rating{
-        background: url("../img/bg_banner.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        padding: 51px 0 50px 0;
-        position: relative;
-        overflow: hidden;
+
+    }
+    .rating{
+      position: relative;
+      overflow: hidden;
+      margin: 30px 0 0 0;
+      .container{
+        img{
+          position: absolute;
+          left: 0;
+          top:0;
+          width: 100%;
+          height: 100%;
+        }
+        .box_container{
+          padding: 85px 0 28px;
           .box{
             position: relative;
-            padding: 27px 0 27px;
             display: flex;
-            justify-content: space-between;
-            width: 250px;
+            width: 300px;
+            padding: 28px 0 0px;
+            justify-content: flex-start;
+            margin: 0 0 36px 0;
             span{
               color: #ffffff;
               font-family: 'SpectralSC-Regular';
-              font-size: 18px;
+              font-size: 24px;
               font-weight: 400;
               line-height: 30px;
               text-transform: uppercase;
@@ -44,13 +55,13 @@
               top:0;
             }
             h5{
-              color: #ffffff;
               font-family: 'SpectralSC-Regular';
-              font-size: 57px;
+              font-size: 86px;
               font-weight: 400;
-              line-height: 30px;
+              line-height: 69px;
               text-transform: uppercase;
-              width: 54%;
+              color: #fff;
+              margin: 0 16px 0 0;
             }
             p{
               color: #ffffff;
@@ -58,15 +69,18 @@
               font-size: 20px;
               font-weight: 400;
               line-height: 22px;
-              width: 46%;
+              transform: translate(0px, 30%);
               text-align: left;
             }
           }
+        }
+
       }
     }
   }
   .content{
     position: relative;
+    padding: 78px 0 61px 0;
     &:before{
       content: '';
       position: absolute;
@@ -77,23 +91,30 @@
     }
     .container{
       h3{
-        color: #000408;
         font-family: 'SpectralSC-Regular';
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 500;
-        line-height: 32px;
+        line-height: 28px;
+        color: #000408;
+        padding: 0 0 16px 0;
       }
       p{
-        color: #000408;
         font-family: 'Manrope-Regular';
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 400;
         line-height: 28px;
+        color: #000408;
+        padding: 0 0 29px 0;
       }
     }
   }
   .company_banner{
-    background: url("../img/company_bg.png");
+    background: url(../img/company_bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding: 170px 0 230px 0;
     .container{
       p{
         text-align: center;
@@ -119,7 +140,7 @@
         &:after{
           position: absolute;
           bottom: 0;
-          top: 98px;
+          top: 128px;
           height: 164px;
           width: 284px;
           content: '';
@@ -156,38 +177,116 @@
   }
   .specialist{
     background-color: #000000;
+    padding: 102px 0 90px;
     .container{
       .title{
-        color: #ffffff;
         font-family: 'SpectralSC-Regular';
-        font-size: 48px;
+        font-size: 36px;
         font-weight: 500;
-        line-height: 72px;
+        line-height: 40px;
+        color: #fff;
       }
       .specialist_slider{
+        margin: 13px 0 0 0;
+        padding: 46px 0 0 0;
+        .slick-arrow{
+
+          top: 3px;
+          &.prev{
+            right: auto;
+            left: 51px;
+          }
+          &.next{
+            right: auto;
+            left: 129px;
+          }
+        }
         .slide{
+          width: 253px;
+          height: 337px;
+          margin: 0 20px 0 0;
           .img{
-            width: 360px;
-            height: 480px;
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
           }
           .text{
+            padding: 18px 6px 5px 5px;
             h3{
-              color: #ffffff;
               font-family: 'SpectralSC-Regular';
-              font-size: 22px;
+              font-size: 18px;
               font-weight: 500;
               line-height: 24px;
+              color: #fff;
             }
             p{
-              color: #ffffff;
               font-family: 'SpectralSC-Regular';
-              font-size: 14px;
+              font-size: 13px;
               font-weight: 500;
-              line-height: 20px;
+              line-height: 18px;
+              color: #fff;
             }
           }
         }
       }
+    }
+  }
+  .certificate{
+    padding: 7px 0 80px 0;
+    .container{
+      .title{
+        font-family: 'SpectralSC-Regular';
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 40px;
+      }
+      .certificate_slider{
+        margin: 10px 0 0 0;
+        padding: 50px 0 0 0;
+
+        .slick-arrow{
+          position: absolute;
+          top: 2px;
+          cursor: pointer;
+          &.next{
+            right: auto;
+            left: 126px;
+            border: none;
+            &:before{
+              content: '';
+              position: absolute;
+              right: 0;
+              background-image: url("../img/prew1.png");
+              width: 46px;
+              height: 16px;
+              background-repeat: no-repeat;
+            }
+          }
+          &.prev{
+            right: auto;
+            left: 50px;
+            border: none;
+            &:before{
+              content: '';
+              position: absolute;
+              right: 0;
+              background-image: url("../img/next1.png");
+              width: 46px;
+              height: 16px;
+              background-repeat: no-repeat;
+            }
+          }
+        }
+        .slide{
+          height: 180px;
+          margin: 0 20px 0 0;
+          overflow: hidden;
+          img{
+            height: 100%;
+          }
+        }
+      }
+
     }
   }
 
