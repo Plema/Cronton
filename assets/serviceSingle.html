@@ -41,16 +41,23 @@
                 <p>уже сегодня</p>
                 <form>
                     <div class="input_box">
+                        <input type="text" required>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
                         <label>Ваше имя</label>
-                        <input type="text">
+
                     </div>
                     <div class="input_box">
-                        <label>Телефон</label>
                         <input type="tel" class="phone_mask" maxlength="18">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label>Телефон</label>
                     </div>
                     <div class="input_box">
+                        <textarea></textarea>
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
                         <label>Ваш вопрос</label>
-                        <input type="text">
                     </div>
                     <button class="submit">Заказать услуги</button>
                 </form>
@@ -62,23 +69,43 @@
             <h3>Сопровождение и оспаривание результатов налоговых проверок</h3>
             <div class="step_block">
                 <div class="step">
-                    <span>1</span>
+                    <span>I</span>
                     <p>Свяжитесь с нами</p>
                 </div>
                 <div class="step">
-                    <span>2</span>
+                    <span>II</span>
                     <p>Анализируем проблему</p>
                 </div>
                 <div class="step">
-                    <span>3</span>
+                    <span>III</span>
                     <p>Организуем встречу</p>
                 </div>
                 <div class="step">
-                    <span>4</span>
+                    <span>IV</span>
                     <p>Заключаем договор</p>
                 </div>
                 <div class="step">
-                    <span>5</span>
+                    <span>V</span>
+                    <p>Реализуем проект</p>
+                </div>
+                <div class="step">
+                    <span>VI</span>
+                    <p>Свяжитесь с нами</p>
+                </div>
+                <div class="step">
+                    <span>VII</span>
+                    <p>Анализируем проблему</p>
+                </div>
+                <div class="step">
+                    <span>VIII</span>
+                    <p>Организуем встречу</p>
+                </div>
+                <div class="step">
+                    <span>IX</span>
+                    <p>Заключаем договор</p>
+                </div>
+                <div class="step">
+                    <span>X</span>
                     <p>Реализуем проект</p>
                 </div>
             </div>
@@ -135,20 +162,31 @@
                         <p>Адвокатская палата Московской области, МКА "Филиппов и партнеры", реестровый номер №</p>
                     </div>
                     <div class="rating">
+                        <div class="benefits__inner">
                             <div class="box">
                                 <span>ТОП</span>
-                                <h5>100</h5>
+                                <h5 class="benefits__number">100</h5>
                                 <p>в рейтинге компаний</p>
                             </div>
                             <div class="box">
-                                <h5>1859</h5>
+                                <h5 class="benefits__number">1859</h5>
                                 <p>успешных проектов</p>
                             </div>
                             <div class="box">
                                 <span>Более</span>
-                                <h5>10</h5>
+                                <h5 class="benefits__number">10</h5>
                                 <p>лет работы</p>
                             </div>
+                            <div class="box">
+                                <h5 class="benefits__number">1859</h5>
+                                <p>успешных проектов</p>
+                            </div>
+                            <div class="box">
+                                <span>Более</span>
+                                <h5 class="benefits__number">10</h5>
+                                <p>лет работы</p>
+                            </div>
+                        </div>
                     </div>
                     <p>
                         Адвокат специализируется на комплексной правовой защите и налоговой безопасности бизнеса,
@@ -184,7 +222,10 @@
 
 <!-- Скрипты -->
 <script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <script src="js/slick.min.js"></script>
+<script src="js/jquery.spincrement.min.js"></script>
+<script src="js/fm.revealator.jquery.min.js"></script>
 <script src="js/jquery.mask.min.js"></script>
 <script src="js/home.min.js"></script>
 <script src="js/main.min.js"></script>

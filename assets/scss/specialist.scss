@@ -1,7 +1,7 @@
 .wrapper{
   .specialist{
     position: relative;
-    padding: 28px 0 0 0;
+    padding: 25px 0 15px;
     &:before{
       content: '';
       position: absolute;
@@ -13,15 +13,20 @@
     }
     .container{
       .banner{
-        padding: 27px 0 0 0;
-        img{
-          width: 299px;
-          height: 400px;
+        margin: 13px 0 0;
+        .img{
+          img{
+            width: 299px;
+            height: 400px;
+            display: block;
+            margin: 0 auto;
+          }
         }
         .text{
           .user_name{
-            padding: 0 13px 45px 3px;
-            margin: 0 0 33px 0;
+            padding: 0 13px 80px 3px;
+            width: 300px;
+            margin: 0 auto 33px;
             h1{
               font-family: 'SpectralSC-Regular';
               font-size: 29px;
@@ -133,20 +138,25 @@
       }
       .container{
         .banner{
-
-          padding: 27px 0 0 0;
-          img{
+          padding: 0;
+          .img{
+           float: left;
             width: 360px;
             height: 480px;
-            float: left;
-          }
-          .text{
-            width: 68%;
-            float: right;
-            padding: 88px 0 0 30px;
+            margin: 0 30px 25px 0;
+           img{
+             width: 360px;
+             height: 480px;
+             margin: 0;
 
+           }
+         }
+          .text{
+            padding: 93px 0px 0 0;
             .user_name{
-              padding: 0 280px 0 0;
+              padding: 0 290px 20px 0;
+              margin: 0 0 60px 0;
+              width: auto;
               h1{
                 color: #ffffff;
                 font-family: 'SpectralSC-Regular';
@@ -173,8 +183,33 @@
 
           }
         }
+        .content{
+          clear: both;
+          padding: 17px 0 27px;
+          .box{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .img{
+              img{
+                width: 179px;
+                height: 260px;
+                margin: 36px 23px 20px 0;
+              }
+            }
+            h3{
+              width: 100%;
+              font-size: 28px;
+            }
+            p{
+              width: 50%;
+              padding: 43px 0 14px;
+            }
+          }
+        }
 
       }
     }
+
   }
 }

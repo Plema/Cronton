@@ -2,18 +2,40 @@
   .services{
     padding: 28px 0 60px;
     overflow: hidden;
+    width: 320px;
+    margin: 0 auto;
     .container{
       .title{
         line-height: 30px;
         padding: 21px 0 26px 0;
       }
       .services_box{
+        .slick-arrow{
+          top: -50px;
+          &.next{
+            &:before{
+              background-image: url("../img/prew1.png");
+            }
+          }
+          &.prev{
+            &:before{
+              background-image: url("../img/next1.png");
+            }
+          }
+        }
         .box{
           position: relative;
           padding: 66px 20px 10px 17px;
           margin: 0px auto 12px;
           width: 298px;
           height: 401px;
+          &:hover{
+            span{
+              transition: 1s linear;
+              color: rgba(255, 255, 255, 1);
+              height: 45px;
+            }
+          }
           span{
             font-family: 'SpectralSC-Regular';
             font-size: 100px;
@@ -22,8 +44,8 @@
             position: absolute;
             top: 21px;
             left: 19px;
-            color: #fff;
-            height: 45px;
+            color: rgba(0, 0, 0, 0.7);
+            height: 0px;
             overflow: hidden;
           }
           h4{
@@ -35,9 +57,10 @@
             min-height: 72px;
           }
           ul{
-            margin: 38px 0 10px 0;
+            margin: 20px 0 10px 0;
             li{
               margin: 0 0 11px 0;
+              padding: 0 30px 0 0;
               a{
                 color: #ffffff;
                 font-family: 'Manrope-Regular';
@@ -45,12 +68,12 @@
                 font-weight: 500;
                 line-height: 30px;
                 position: relative;
-                padding: 0 30px 0 0;
+                display: inline;
                 &:before{
                   font-family: 'fontello';
                   font-size: 24px;
                   position: absolute;
-                  right: 0;
+                  right: -40px;
                   bottom: 0;
                   width: 26px;
                   height: 26px;
@@ -81,11 +104,19 @@
 @media (min-width: 768px) {
   .wrapper{
     .services{
+      width: auto;
+      margin: 0;
       .container{
+        .title{
+          padding: 21px 0 26px 17px;
+        }
         .services_box{
           display: flex;
           flex-wrap: wrap;
-          justify-content: center;
+          justify-content: space-around;
+          .box{
+            margin: 0 20px 20px;
+          }
         }
         .btn{
           margin: 26px auto 19px;
@@ -96,7 +127,13 @@
 }
 @media (min-width: 1024px) {
   .wrapper{
-
+    .services{
+      .container{
+        .title{
+          padding: 21px 0 26px 73px;
+        }
+      }
+    }
   }
 }
 @media (min-width: 1280px) {
@@ -114,12 +151,17 @@
             width: 350px;
             padding: 130px 5px 16px 39px;
             height: 500px;
-            margin: 0 0 12px 0;
+            margin: 0 5px 20px;
+            &:hover{
+              span{
+                height: 55px;
+              }
+            }
             span{
               font-size: 120px;
               top: 50px;
               left: 40px;
-              height: 55px;
+
               line-height: 65px;
             }
             h4{

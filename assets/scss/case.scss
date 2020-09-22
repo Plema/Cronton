@@ -3,7 +3,13 @@
   .case{
     padding: 29px 0 30px;
     overflow: hidden;
+    &:before{
+      display: none;
+    }
     .container{
+      .title{
+        color: #000000;
+      }
       .breadcrumbs{
         li{
           color: #000000;
@@ -17,6 +23,88 @@
         padding: 6px 0 40px 0;
         line-height: 40px;
       }
+      .select_box{
+        margin: 20px 0;
+        position: relative;
+        label{
+          font-family: 'SpectralSC-Regular';
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 18px;
+          color: #000;
+          display: block;
+          margin: 10px 0;
+        }
+        .jcf-select{
+          border: 1px solid #6c6c6c;
+          background-color: #fff;
+          width: 100%;
+          max-width: 457px;
+          overflow: hidden;
+          display: block;
+          height: 46px;
+          .jcf-select-opener{
+            &:before{
+              content: '\f107';
+              font-family: 'fontello';
+              color: #e2e2e2;
+              font-size: 8px;
+              position: absolute;
+              right: 0;
+              top: 53%;
+              transform: translate(-21px, -50%);
+              transition: 0.3s;
+
+            }
+          }
+          .jcf-select-text{
+            span{
+              font-family: 'SpectralSC-Regular';
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 18px;
+              color: #000;
+            }
+          }
+          .jcf-select-drop{
+            position: absolute;
+            width: 100%;
+            background: #ffffff;
+            z-index: 2;
+            padding: 10px;
+            .jcf-select-drop-content{
+              .jcf-list{
+                .jcf-list-content{
+                  ul{
+                    li{
+                      margin: 5px 0;
+                      span{
+                        font-family: 'SpectralSC-Regular';
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 18px;
+                        color: #000;
+                        display: block;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .jcf-drop-active{
+            .jcf-select-opener{
+              &:before{
+                transition: 0.3s;
+                top: 55%;
+                transform: translate(22px, -50%)rotate(-180deg);
+              }
+            }
+          }
+        }
+
+
+      }
 
     }
     .case_box{
@@ -28,12 +116,11 @@
       .img{
         position: relative;
         order: 1;
-        &:before{
+        span{
           position: absolute;
           z-index: 0;
           width: 184px;
           height: 242px;
-          content: '';
           background-color: #000;
           top: -20px;
         }
@@ -147,7 +234,7 @@
           order: inherit;
           width: 380px;
           height: 240px;
-          &:before{
+          span{
             width: 184px;
             height: 120%;
           }
@@ -173,8 +260,22 @@
       width: 1080px;
       margin: 0 auto;
       .container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 1080px;
+        .breadcrumbs{
+          width: 100%;
+        }
         .title{
           padding: 30px 0 40px;
+          text-align: left;
+        }
+        .select_box{
+          display: flex;
+          label{
+            margin:0 10px;
+          }
         }
       }
       .case_box{
@@ -185,7 +286,7 @@
           order: inherit;
           width: 600px;
           height: 100%;
-          &:before{
+          span{
             height: 110%;
             width: 430px;
             left: 50%;
@@ -207,7 +308,7 @@
   .wrapper{
     .case{
       padding: 64px 0 137px;
-      width: 1140px;
+      width: 1160px;
       margin: 0 auto;
       .container{
         width: 1140px;
@@ -224,7 +325,7 @@
         .img{
           width: 750px;
           height: 475px;
-          &:before{
+          span{
             width: 430px;
             height: 566px;
             top: -47px;
