@@ -106,7 +106,7 @@
               line-height: 26px;
               position: absolute;
               top: 50%;
-              left: 5px;
+              left: 0;
               width: 26px;
               height: 26px;
               content: '\e800';
@@ -215,11 +215,10 @@
       padding: 16px 0 0 0;
       .container{
         .result_content{
-          width: 1140px;
           margin: 0 auto;
           padding: 33px 0;
           .box_result{
-            width: 360px;
+            width: 320px;
             margin: 0 0 30px;
             padding: 29px 25px 35px 28px;
             h4{
@@ -238,7 +237,28 @@
   }
 }
 @media (min-width: 1400px) {
+  .wrapper{
+    .vocabulary_banner{
+    }
+    .result{
+      .container{
+        .result_content{
+          .box_result{
+            width: 360px;
+            h4{
 
+            }
+            p{
+
+            }
+            a{
+
+            }
+          }
+        }
+      }
+    }
+  }
 }
 @media (min-width: 1600px) {
 

@@ -152,7 +152,7 @@
            }
          }
           .text{
-            padding: 93px 0px 0 0;
+            padding: 30px 0px 0 0;
             .user_name{
               padding: 0 290px 20px 0;
               margin: 0 0 60px 0;
@@ -190,6 +190,7 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+            margin: 0 0 30px 0;
             .img{
               img{
                 width: 179px;
@@ -202,9 +203,24 @@
               font-size: 28px;
             }
             p{
-              width: 50%;
-              padding: 43px 0 14px;
+              width: 48%;
+              padding: 43px 0 25px;
             }
+          }
+        }
+
+      }
+    }
+
+  }
+}
+@media (min-width: 1400px){
+  .wrapper{
+    .specialist{
+      .container{
+        .banner{
+          .text{
+            padding: 80px 0px 0 0;
           }
         }
 

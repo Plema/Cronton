@@ -23,9 +23,15 @@
     }
     .box{
       position: relative;
-
       margin: 0px auto 12px;
-
+      &:before{
+        content: '';
+        border: 1px solid #9f9f9f;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 102%;
+      }
       .top{
         padding: 134px 5px 46px 0px;
         background-repeat: no-repeat;
@@ -103,8 +109,14 @@
         position: relative;
 
         margin: 0px auto 12px;
+        &:before{
+          width: 1080px;
+          height: 102%;
+          transform: translate(-50%, 0px);
+          left: 50%;
+        }
         .top{
-          width: 1140px;
+          width: 1080px;
           margin: 0 auto;
          .container{
            span{
@@ -128,7 +140,7 @@
         .container{
 
           .bottom{
-            padding: 14px 0 0 24px;
+            padding: 14px 40px 13px;
 
             h4{
               color: #000000;
@@ -160,6 +172,25 @@
     }
   }
 }
-@media (min-width: 1920px){
+@media (min-width: 1400px){
+  .wrapper{
+    .service{
 
+      .container{
+
+
+
+      }
+      .box{
+        &:before{
+          width: 1140px;
+
+        }
+        .top{
+          width: 1140px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
 }

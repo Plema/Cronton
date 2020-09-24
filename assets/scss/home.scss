@@ -83,92 +83,7 @@
       }
     }
   }
-  .case{
-    padding: 46px 0 46px;
-    position: relative;
-    overflow: hidden;
-    &:before{
-      width: 100%;
-      height: 334px;
-      content: '';
-      background-color: #000;
-      position: absolute;
-      top: 0;
-    }
-    .container{
-      .title{
-        color: #ffffff;
-        line-height: 36px;
-        padding: 18px 0 30px;
-      }
-      .btn{
-        font-family: 'SpectralSC-Regular';
-        font-size: 15px;
-        width: 210px;
-        margin: 21px 0 0 0px;
-        padding: 14px 0;
-      }
 
-    }
-    .case_slider{
-      position: relative;
-      width: 320px;
-      margin: 0 auto;
-      .slick-slide{
-        width: 320px;
-        margin: 0 auto;
-      }
-      .slide{
-        width: 100%;
-        margin: 0 auto;
-        img{
-          width: 321px;
-          height: 204px;
-
-        }
-        .text{
-          padding: 15px 13px 0px 8px;
-          h4{
-            color: #000408;
-            font-family: 'SpectralSC-Regular';
-            font-size: 22px;
-            font-weight: 500;
-            line-height: 28px;
-          }
-          p{
-            color: #000408;
-            font-family: 'Manrope-Regular';
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 30px;
-          }
-          a{
-            color: #000408;
-            font-family: 'SpectralSC-Regular';
-            font-size: 16px;
-            font-weight: 500;
-            line-height: 36px;
-            position: relative;
-            &:before{
-              font-family: 'fontello';
-              font-size: 24px;
-              position: absolute;
-              right: -40px;
-              bottom: 0;
-              width: 26px;
-              height: 26px;
-              content: '\e800';
-              color: #1c1c1c;
-              border-radius: 50%;
-              text-align: center;
-              line-height: 26px;
-              border: 1px solid #1c1c1c;
-            }
-          }
-        }
-      }
-    }
-  }
   .company{
     position: relative;
     padding: 40px 0 0px 0;
@@ -375,7 +290,7 @@
                     font-family: 'SpectralSC-Regular';
                     font-size: 16px;
                     font-weight: 500;
-                    line-height: 26px;
+                    line-height: 30px;
                     position: absolute;
                     margin: 0 5px 0 0;
                     padding: 0 50px 0 0px;
@@ -460,10 +375,11 @@
                         font-family: "Spectral SC";
                         font-size: 18px;
                         font-weight: 500;
-                        line-height: 24px;
+                        line-height: 30px;
                         position: relative;
                         text-transform: uppercase;
                         padding: 0 0 40px 0;
+                        display: inline-block;
                         &:before{
                           font-family: 'fontello';
                           font-size: 24px;
@@ -574,80 +490,12 @@
 }
 @media (min-width: 480px) {
   .wrapper{
-    .case{
-      .case_slider{
-        position: relative;
-        width: 480px;
-        margin: 0 auto;
-        .slick-slide{
-          width: 480px;
-          margin: 0 auto;
-        }
-        .slide{
 
-          img{
-            width: 480px;
-            height: auto;
-          }
-
-        }
-      }
-    }
   }
 }
 @media (min-width: 768px) {
   .wrapper{
 
-    .case{
-      padding: 46px 0 46px;
-      position: relative;
-      overflow: hidden;
-      &:before{
-        width: 100%;
-        height: 334px;
-        content: '';
-        background-color: #000;
-        position: absolute;
-        top: 0;
-      }
-      .container{
-        .title{
-          padding: 18px 0 30px 48px;
-        }
-        .btn{
-          margin: 21px 0 8px 48px;
-        }
-
-      }
-      .case_slider{
-        position: relative;
-        width: 550px;
-        margin: 0 auto;
-        .slick-slide{
-          width: 550px;
-          margin: 0 auto;
-        }
-        .slide{
-
-          img{
-            width: 550px;
-            height: auto;
-          }
-          .text{
-            width: 550px;
-            margin: 0 auto;
-          }
-        }
-        .slick-arrow{
-          &.prev {
-            right: 60px;
-          }
-          &.next {
-            right: 0px;
-          }
-        }
-      }
-    }
     .company{
 
       .container{
@@ -696,37 +544,7 @@
 }
 @media (min-width: 1024px) {
   .wrapper{
-    .case{
-      .container{
-        .title{
-          padding: 18px 0 30px 55px;
-        }
-        .btn{
-          margin: 21px 0 8px 48px;
-        }
 
-      }
-      .case_slider{
-        position: relative;
-        width: 750px;
-        margin: 0 auto;
-        .slick-slide{
-          width: 750px;
-          margin: 0 auto;
-        }
-        .slide{
-          img{
-            width: 750px;
-            height: auto;
-          }
-          .text{
-            width: 750px;
-            margin: 0 auto;
-          }
-        }
-
-      }
-    }
     .company{
       .container{
         ul{
@@ -799,72 +617,6 @@
           width: 340px;
           padding: 20px 25px;
           border-radius: 35px;
-        }
-      }
-    }
-
-    .case{
-      padding: 40px 0 120px;
-      overflow: inherit;
-      &:before{
-        width: 40%;
-        height: 670px;
-      }
-      .container{
-        .title{
-          padding: 18px 0 33px 0px;
-        }
-        .btn{
-          font-size: 18px;
-          position: absolute;
-          z-index: 2;
-          bottom: -90px;
-          display: block;
-          width: 290px;
-          margin: 21px 0 0;
-          padding: 21px 0;
-          border-radius: 35px;
-          left: 0%;
-
-        }
-
-      }
-      .case_slider{
-        width: 1080px;
-        .slick-slide{
-          width: 1080px;
-        }
-        .slick-arrow{
-          &.prev{
-            left: 30%;
-          }
-          &.next{
-            left: 35%;
-          }
-        }
-        .slide{
-          display: flex;
-          img{
-            width: 650px;
-          }
-          .text{
-            padding: 50px 10px 10px 37px;
-            width: 420px;
-            h4{
-              font-size: 30px;
-              line-height: 35px;
-              padding: 0 23px 0 0;
-            }
-            p{
-              padding: 13px 0px 20px 0;
-            }
-            a{
-
-              &:before{
-
-              }
-            }
-          }
         }
       }
     }
@@ -968,6 +720,8 @@
               font-size: 48px;
             }
             .news_box{
+              height: 600px;
+              overflow: hidden;
               .box{
                 margin: 75px 0 0 4px;
                 display: flex;
@@ -1012,7 +766,7 @@
 
             .btn{
               width: 282px;
-              margin: 56px 0 0 0;
+              margin: 30px 0 0 0;
               padding: 18px 0;
             }
           }
@@ -1045,6 +799,8 @@
                 position: relative;
 
                 .box{
+                  height: 600px;
+                  overflow: hidden;
                   span{
                     font-size: 220px;
                     text-align: left;
@@ -1058,7 +814,7 @@
 
                     }
                     li{
-
+                      padding: 0 0 40px;
                       &:before{
 
                       }
@@ -1136,31 +892,7 @@
 }
 @media (min-width: 1400px) {
   .wrapper{
-    .case{
-      padding: 40px 0 120px;
-      overflow: inherit;
-      &:before{
 
-      }
-      .container{
-
-
-
-      }
-      .case_slider{
-        width: 1160px;
-        .slick-slide{
-          width: 1160px;
-        }
-        .slide{
-
-          .text{
-
-            width: 500px;
-          }
-        }
-      }
-    }
     .company{
       overflow: inherit;
       padding: 190px 0 0;
@@ -1358,32 +1090,7 @@
 }
 @media (min-width: 1600px) {
   .wrapper{
-    .case{
 
-      &:before{
-        height: 740px;
-      }
-      .container{
-
-
-
-      }
-      .case_slider{
-        width: 1280px;
-        .slick-slide{
-          width: 1280px;
-        }
-        .slide{
-          img{
-            width: 750px;
-          }
-          .text{
-
-            width: 500px;
-          }
-        }
-      }
-    }
     .company{
       overflow: inherit;
       padding: 190px 0 0;
@@ -1598,77 +1305,6 @@
         }
       }
     }
-
-    .case{
-      padding: 65px 0 125px;
-      overflow: inherit;
-      &:before{
-        position: absolute;
-        top: 0;
-        width: 43%;
-        height: 760px;
-        content: '';
-        background-color: #000;
-        left: 0;
-      }
-      .container{
-        .title{
-          padding: 18px 0 33px 0px;
-        }
-        .btn{
-          font-size: 18px;
-          bottom: -71px;
-          margin: 21px 0 0;
-          left: 0;
-
-        }
-
-      }
-      .case_slider{
-        width: 1830px;
-        .slick-slide{
-          width: 1830px;
-        }
-        .slick-arrow{
-          &.prev{
-            left: 667px;
-            right: auto;
-          }
-          &.next{
-            left: 742px;
-            right: auto;
-          }
-        }
-        .slide{
-          display: flex;
-          width: 65%;
-          margin: 0 auto;
-          img{
-            width: 750px;
-            height: 475px;
-            margin: 0 0 0 21px;
-          }
-          .text{
-            width: 455px;
-            padding: 105px 0px 0 37px;
-            h4{
-              font-size: 30px;
-              line-height: 35px;
-              padding: 0 23px 0 0;
-            }
-            p{
-              padding: 13px 0px 20px 0;
-            }
-            a{
-
-              &:before{
-
-              }
-            }
-          }
-        }
-      }
-    }
     .company{
       overflow: inherit;
       padding: 190px 0 0;
@@ -1749,7 +1385,6 @@
 
             .btn{
               width: 282px;
-              margin: 55px 0 0 0;
               padding: 18px 0;
             }
           }

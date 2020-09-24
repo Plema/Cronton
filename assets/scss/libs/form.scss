@@ -2,7 +2,7 @@
 .form_consultation{
   position: relative;
   overflow: hidden;
-  padding: 241px 0 38px;
+  padding: 41px 0 38px;
   #banner{
     width: 200%;
     height: 170px;
@@ -23,6 +23,9 @@
           .title{
             text-align: center;
             line-height: 36px;
+
+            padding: 30px 0 0 0;
+
           }
           p{
             color: #000408;
@@ -38,6 +41,8 @@
             width: 298px;
             position: relative;
             z-index: 1;
+
+
             .input_box{
                position:relative;
                margin: 0 0 19px 0;
@@ -89,65 +94,15 @@
                  top:-20px;
                  font-size:12px;
                }
-               .bar{
-                 position:relative;
-                 display:block;
-                 width:100%;
-               }
-               .bar:before, .bar:after{
-                 content:'';
-                 height:3px;
-                 width:0;
-                 bottom:1px;
-                 position:absolute;
-                 background:#000000;
-                 transition:0.2s ease all;
-                 -moz-transition:0.2s ease all;
-                 -webkit-transition:0.2s ease all;
-               }
-               .bar:before {
-                 left:50%;
-               }
-               .bar:after {
-                 right:50%;
-               }
-               input:focus ~ .bar:before, input:focus ~ .bar:after {
-                 width:50%;
-               }
-               textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
-                 width:50%;
-               }
-               .highlight {
-                 position:absolute;
-                 height:60%;
-                 width:100px;
-                 top:25%;
-                 left:0;
-                 pointer-events:none;
-                 opacity:0.5;
-               }
-               input:focus ~ .highlight {
-                 -webkit-animation:inputHighlighter 0.3s ease;
-                 -moz-animation:inputHighlighter 0.3s ease;
-                 animation:inputHighlighter 0.3s ease;
-               }
-               textarea:focus ~ .highlight {
-                 -webkit-animation:inputHighlighter 0.3s ease;
-                 -moz-animation:inputHighlighter 0.3s ease;
-                 animation:inputHighlighter 0.3s ease;
-               }
-               @-webkit-keyframes inputHighlighter {
-                 from { background:#5264AE; }
-                 to 	{ width:0; background:transparent; }
-               }
-               @-moz-keyframes inputHighlighter {
-                 from { background:#5264AE; }
-                 to 	{ width:0; background:transparent; }
-               }
-               @keyframes inputHighlighter {
-                 from { background:#5264AE; }
-                 to 	{ width:0; background:transparent; }
-               }
+
+              input:focus ~ label, input:valid ~ label 		{
+                top:-20px;
+                font-size:12px;
+              }
+              textarea:focus ~ label, textarea:valid ~ label 		{
+                top:-20px;
+                font-size:12px;
+              }
              }
 
             button{
@@ -211,7 +166,7 @@
 }
 @media (min-width: 1280px) {
     .form_consultation{
-      padding: 169px 0 300px;
+      padding: 60px 0 400px;
       #banner{
         height: 385px;
       }
@@ -373,7 +328,7 @@
       }
       .block_form{
         .container{
-          width: 1144px;
+          width: 1140px;
           .title{
             padding: 110px 0px 16px 0px;
             font-size: 50px;

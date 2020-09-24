@@ -12,6 +12,8 @@
 </head>
 
 <body>
+<!-- loader -->
+<include src="assets/templates/loader.html"></include>
 <!-- Header -->
 <include src="assets/templates/header.html"></include>
 <!-- Основной контент -->
@@ -25,14 +27,18 @@
             </ul>
             <h2 class="title">Кейсы</h2>
             <div class="select_box">
-                <label>
-                    Сортировать по категориям:
-                </label>
-                <select class="select" data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false, "fakeDropInBody": false, "useCustomScroll": false}'>
-                    <option >Налоговые проверки, мониторинг налоговых риск...</option>
-                    <option>Налоговые проверки</option>
-                    <option>Налоговые проверки, мониторинг налоговых риск...</option>
-                </select>
+                <p>Сортировать по категориям:</p>
+                <div class="case_filter" >
+                    <div class="filter">
+                        <a class="filter-open" href="javascript:void(0)"><span><b>Выбрать </b> <i class="icon-next"></i></span></a>
+                        <ul id="pp_offers_list" class="pp_offers_list ">
+                            <li class="tabs-button active"><a href="#item-1"><label><input type="radio" id="radio_1">Налоговые проверки,</label></a></li>
+                            <li class="tabs-button "><a href="#item-2" ><label><input type="radio" id="radio_2">мониторинг налоговых рисков</label></a></li>
+                            <li class="tabs-button"><a href="#item-3" ><label><input type="radio" id="radio_3">Ещё один пункт очень длинный в две строки текст и далее</label></a></li>
+                            <li class="tabs-button"><a href="#item-4"><label><input type="radio" id="radio_4">Ещё один</label></a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="case_box">
@@ -146,6 +152,7 @@
 <script src="js/jquery.mask.min.js"></script>
 <script src="js/jcf.min.js"></script>
 <script src="js/jcf.select.min.js"></script>
+<script src="js/jcf.radio.min.js"></script>
 <script src="js/case.min.js"></script>
 <script src="js/main.min.js"></script>
 

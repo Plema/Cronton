@@ -24,12 +24,13 @@
         background: #ffffff;
         width: 100%;
         z-index: 5;
-        padding: 10px 0 10px 0;
+        padding: 37px 0 37px 0;
         top: 104px;
         text-align: center;
         left: 0;
 
         li{
+          margin: 0 0 17px 0;
           a{
             color: #1e1e1e;
             font-family: 'Manrope-Regular';
@@ -126,6 +127,9 @@
     .container{
       display: flex;
       justify-content: space-between;
+      width: 100%;
+      padding:0 45px;
+      max-width: 1915px;
       .nav_mobile{
         display: none;
       }
@@ -306,14 +310,13 @@
     .container{
       display: flex;
       justify-content: space-between;
-      width: 1830px;
        .nav_desktop{
           .menu{
             display: flex;
             position: relative;
             justify-content: flex-start;
             top:auto;
-            margin: 28px 276px 20px 46px;
+            margin: 28px 250px 20px 46px;
             li{
               margin: 0 50px 0 0;
               a{

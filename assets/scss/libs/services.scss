@@ -91,7 +91,7 @@
 
       }
       .btn{
-        margin: 26px 0 0 19px;
+        margin: 26px auto 19px;
         padding: 14px 0;
         width: 210px;
         font-size: 15px;
@@ -116,6 +116,7 @@
           justify-content: space-around;
           .box{
             margin: 0 20px 20px;
+
           }
         }
         .btn{
@@ -142,16 +143,20 @@
       padding: 30px 0 60px;
       .container{
         .title{
-          padding: 21px 0 55px 0px;
+          padding: 21px 5px 55px 5px;
         }
         .services_box{
           display: flex;
           justify-content: space-between;
+          .slick-slide{
+            width: 365px;
+          }
           .box{
             width: 350px;
             padding: 130px 5px 16px 39px;
             height: 500px;
-            margin: 0 5px 20px;
+            margin: 0 ;
+
             &:hover{
               span{
                 height: 55px;
@@ -185,7 +190,7 @@
         .btn{
           font-size: 18px;
           width: 278px;
-          margin: 39px 0 0 7px;
+          margin: 39px 0 5px 5px;
           padding: 18px 0;
           border-radius: 35px;
         }
@@ -195,7 +200,16 @@
 }
 @media (min-width: 1400px) {
   .wrapper{
+    .services{
+      .container{
+        .services_box{
+          .slick-slide{
+            width: 395px;
+          }
 
+        }
+      }
+    }
   }
 }
 @media (min-width: 1600px) {
@@ -210,7 +224,7 @@
       .container{
         width: 1140px;
         .title{
-          padding: 21px 0 55px 0px;
+
         }
         .services_box{
 
@@ -233,10 +247,7 @@
 
         }
         .btn{
-          font-size: 18px;
-          width: 278px;
-          margin: 39px 0 0 7px;
-          padding: 18px 0;
+
         }
       }
     }

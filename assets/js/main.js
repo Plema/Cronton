@@ -1,4 +1,10 @@
 $(document).ready(function(){
+
+        setTimeout(function(){
+            $('.preloader').toggleClass('active');
+            $('body').css('overflow','auto')
+        },12000);
+
     <!-- меню -->
     $(".icon_menu").click(function() {
         $('.menu').toggleClass("active");
@@ -46,7 +52,7 @@ $(document).ready(function(){
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: false,
-        variableWidth: true,
+
         autoplay:true,
         autoplaySpeed:3000,
         nextArrow: '<button class="slick-arrow next"><span></span></button>',
@@ -61,6 +67,7 @@ $(document).ready(function(){
         dots: false,
         variableWidth: true,
         autoplay:true,
+        centerMode:false,
         autoplaySpeed:3000,
         nextArrow: '<button class="slick-arrow next"><span></span></button>',
         prevArrow: '<button class="slick-arrow prev"><span></span></button>',
@@ -69,6 +76,7 @@ $(document).ready(function(){
 
                 breakpoint: 1920,
                 settings: {
+                    centerMode:false,
                     slidesToShow: 3,
                     slidesToScroll: 1,
                 }
@@ -173,3 +181,5 @@ $(document).ready(function(){
     );
     <!-- конец Анимация цифр-->
 });
+
+

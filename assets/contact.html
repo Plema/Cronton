@@ -12,6 +12,8 @@
 </head>
 
 <body>
+<!-- loader -->
+<include src="assets/templates/loader.html"></include>
 <!-- Header -->
 <include src="assets/templates/header.html"></include>
 <!-- Основной контент -->
@@ -74,13 +76,13 @@
 
                         </div>
                         <div class="input_box">
-                            <input type="tel" class="phone_mask" maxlength="18">
+                            <input class="phone_mask" maxlength="18" required>
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label>Телефон</label>
                         </div>
                         <div class="input_box">
-                            <textarea></textarea>
+                            <textarea required></textarea>
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label>Ваш вопрос</label>
