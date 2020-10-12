@@ -3,7 +3,7 @@ $(document).ready(function(){
         setTimeout(function(){
             $('.preloader').toggleClass('active');
             $('body').css('overflow','auto')
-        },12000);
+        },4000);
 
     <!-- меню -->
     $(".icon_menu").click(function() {
@@ -53,7 +53,7 @@ $(document).ready(function(){
         slidesToScroll: 1,
         dots: false,
 
-        autoplay:true,
+        //autoplay:true,
         autoplaySpeed:3000,
         nextArrow: '<button class="slick-arrow next"><span></span></button>',
         prevArrow: '<button class="slick-arrow prev"><span></span></button>',
@@ -66,7 +66,7 @@ $(document).ready(function(){
         slidesToScroll: 1,
         dots: false,
         variableWidth: true,
-        autoplay:true,
+        //autoplay:true,
         centerMode:false,
         autoplaySpeed:3000,
         nextArrow: '<button class="slick-arrow next"><span></span></button>',
@@ -135,51 +135,74 @@ $(document).ready(function(){
 
     <!-- Попап-->
     $('.open-form').on("click", function () {
-        $('.overlay-form').addClass('active fadeInDown');
+        $('.formPopup').addClass('active fadeInDown');
+        $('.formPopup ').removeClass('fadeOutUp');
         $('body').addClass('hid');
 
     });
-    $('.overlay-form .close,.close-popup').on("click", function () {
-        $('.overlay-form').toggleClass('fadeOutUp fadeInDown');
+    $('.formPopup .close,.close-popup').on("click", function () {
+        $('.formPopup ').toggleClass('fadeOutUp fadeInDown');
         $('body').removeClass('hid');
         window.setTimeout(function() {
-            $('.overlay-form').removeClass('active');
+            $('.formPopup').removeClass('active');
         }, 500);
+    });
+    $('.formPopup .closeBtn').on("click", function () {
+        $('.formPopup').removeClass('active fadeInDown ');
+        $('body').removeClass('hid');
+    });
+
+
+    $('.valid-form.close,.close-popup').on("click", function () {
+        $('.valid-form').removeClass('active');
     });
     <!-- конец Попап-->
 
 
     <!-- Анимация цифр-->
-    jQuery("#banner").mousemove(
-        function(e){
-            var offset = jQuery(this).offset();
-            var xPos = e.pageX - offset.left;
-            var yPos = e.pageY - offset.top;
-
-            var mouseXPercent = Math.round(xPos / jQuery(this).width() * 100);
-            var mouseYPercent = Math.round(yPos / jQuery(this).height() * 100);
-
-            jQuery(this).children('img').each(
-                function(){
-                    var diffX = jQuery('#Parallax').width() - jQuery(this).width();
-                    var diffY = jQuery('#Parallax').height() - jQuery(this).height();
-
-                    var myX = diffX * (mouseXPercent / 1500);
-
-                    var myY = diffY * (mouseYPercent / 1080);
-
-                    var cssObj = {
-                        'left': myX + 'px',
-                        'top': myY + 'px'
-                    }
-                    jQuery(this).animate({left: myX, top: myY},{duration: 50, queue: false, easing: 'linear'});
-
-                }
-            );
-
-        }
-    );
+    //jQuery("#banner").mousemove(
+    //    function(e){
+    //        var offset = jQuery(this).offset();
+    //        var xPos = e.pageX - offset.left;
+    //        var yPos = e.pageY - offset.top;
+    //
+    //        var mouseXPercent = Math.round(xPos / jQuery(this).width() * 100);
+    //        var mouseYPercent = Math.round(yPos / jQuery(this).height() * 100);
+    //
+    //        jQuery(this).children('img').each(
+    //            function(){
+    //                var diffX = jQuery('#Parallax').width() - jQuery(this).width();
+    //                var diffY = jQuery('#Parallax').height() - jQuery(this).height();
+    //
+    //                var myX = diffX * (mouseXPercent / 1500);
+    //
+    //                var myY = diffY * (mouseYPercent / 1080);
+    //
+    //                var cssObj = {
+    //                    'left': myX + 'px',
+    //                    'top': myY + 'px'
+    //                }
+    //                jQuery(this).animate({left: myX, top: myY},{duration: 50, queue: false, easing: 'linear'});
+    //
+    //            }
+    //        );
+    //
+    //    }
+    //);
     <!-- конец Анимация цифр-->
+
+    //$('.input').on('click', function() {
+    //    $(this).addClass("active")
+    //
+    //});
+    $('.pp-form').on('focus blur', function(e){
+        if(!$(this).val())$(this).parents('.input')[e.type === 'focus' ? 'addClass' : 'removeClass']('active');
+    });
+
+    //$('.pp-form').on('focus blur', function(e){
+    //    $(this).parents('.input')[(e.type=='focus' && $.trim($(this).val()).length)?'addClass':'removeClass']('input-focused');
+    //});
+
 });
 
 

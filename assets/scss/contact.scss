@@ -89,9 +89,10 @@
   .map_content{
 
     .map{
-      height: 615px;
+      overflow: hidden;
       background-position: center;
       background-repeat: no-repeat;
+      height: 460px;
     }
     .form_block{
       padding: 65px 0 43px 0;
@@ -117,154 +118,148 @@
             padding: 0 0 5px 0;
             .input_box{
               position:relative;
-              margin: 0 0 19px 0;
-              input {
-                width: 100%;
-                font-size:18px;
-                padding:10px 10px 10px 5px;
-                display:block;
-                border:none;
-                border-bottom: 1px solid #000000;
-              }
-              input:focus{
-                outline:none;
-              }
-              textarea{
-                font-size:18px;
-                padding:10px 10px 10px 5px;
-                display:block;
-                width: 100%;
-                border:none;
-                border-bottom: 1px solid #000000;
-                resize: none;
-                height: 44px;
-              }
-              textarea:focus{
-                outline:none;
-              }
-              label{
-                font-family: 'SpectralSC-Regular';
-                font-size: 15px;
-                font-weight: 500;
-                line-height: 24px;
-                text-transform: uppercase;
-                /* Text style for "В, аше имя" */
-                letter-spacing: 3px;
-                position:absolute;
-                pointer-events:none;
-                left:5px;
-                top:10px;
-                transition:0.2s ease all;
-                -moz-transition:0.2s ease all;
-                -webkit-transition:0.2s ease all;
-              }
-              input:focus ~ label{
-                top:-20px;
-                font-size:12px;
-              }
-              textarea:focus ~ label{
-                top:-20px;
-                font-size:12px;
-              }
-              .bar{
-                position:relative;
-                display:block;
-                width:100%;
-              }
-              .bar:before, .bar:after{
-                content:'';
-                height:3px;
-                width:0;
-                bottom:1px;
-                position:absolute;
-                background:#000000;
-                transition:0.2s ease all;
-                -moz-transition:0.2s ease all;
-                -webkit-transition:0.2s ease all;
-              }
-              .bar:before {
-                left:50%;
-              }
-              .bar:after {
-                right:50%;
-              }
-              input:focus ~ .bar:before, input:focus ~ .bar:after {
-                width:50%;
-              }
-              textarea:focus ~ .bar:before, textarea:focus ~ .bar:after {
-                width:50%;
-              }
-              .highlight {
-                position:absolute;
-                height:60%;
-                width:100px;
-                top:25%;
-                left:0;
-                pointer-events:none;
-                opacity:0.5;
-              }
-              input:focus ~ .highlight {
-                -webkit-animation:inputHighlighter 0.3s ease;
-                -moz-animation:inputHighlighter 0.3s ease;
-                animation:inputHighlighter 0.3s ease;
-              }
-              textarea:focus ~ .highlight {
-                -webkit-animation:inputHighlighter 0.3s ease;
-                -moz-animation:inputHighlighter 0.3s ease;
-                animation:inputHighlighter 0.3s ease;
-              }
-              @-webkit-keyframes inputHighlighter {
-                from { background:#5264AE; }
-                to 	{ width:0; background:transparent; }
-              }
-              @-moz-keyframes inputHighlighter {
-                from { background:#5264AE; }
-                to 	{ width:0; background:transparent; }
-              }
-              @keyframes inputHighlighter {
-                from { background:#5264AE; }
-                to 	{ width:0; background:transparent; }
-              }
-            }
-            button{
-              font-family: 'SpectralSC-Regular';
-              font-size: 16px;
-              font-weight: 500;
-              line-height: 23px;
-              display: block;
-              width: 267px;
-              margin: 30px auto;
-              padding: 14px;
-              text-align: center;
-              color: #ffffff;
-              border: 0;
-              border-radius: 27px;
-              background-color: #000000;
-              transition: 0.3s;
-              position: relative;
-              &:hover{
-                background-color: #ffffff;
-                color: #000;
-                border: 1px solid #000000;
-                &:before{
-                  position: absolute;
-                  top: 4px;
-                  left: 0;
-                  transition: 0.3s;
+              margin: 0 0 30px 0;
+              .input{
+                padding: 15px 0 0 0;
+                span{
+                  input {
+                    width: 100%;
+                    font-size:18px;
+                    padding:0px 10px 5px 5px;
+                    display:block;
+                    border:none;
+                    border-bottom: 1px solid #000000;
+                  }
+                  textarea {
+                    width: 100%;
+                    font-size:18px;
+                    padding: 5px 10px 10px 5px;
+                    height: 30px;
+                    display:block;
+                    border:none;
+                    border-bottom: 1px solid #000000;
+                    resize: none;
+                  }
+                }
+                label{
+                  font-family: 'SpectralSC-Regular';
+                  font-size: 15px;
+                  font-weight: 500;
+                  line-height: 24px;
+                  text-transform: uppercase;
+                  letter-spacing: 3px;
+                  position:absolute;
+                  pointer-events:none;
+                  left:5px;
+                  top:10px;
+                  transition:0.2s ease all;
+                  -moz-transition:0.2s ease all;
+                  -webkit-transition:0.2s ease all;
+                }
+                &.active{
+                  label{
+                    top:-3px;
+                    font-size:12px;
+                  }
+                  .bar:after {
+                    width:50%;
+                  }
+                  .bar:before {
+                    width:50%;
+                  }
+                  .highlight {
+                    -webkit-animation:inputHighlighter 0.3s ease;
+                    -moz-animation:inputHighlighter 0.3s ease;
+                    animation:inputHighlighter 0.3s ease;
+                  }
+                }
+                .bar{
+                  position:relative;
+                  display:block;
+                  width:100%;
+                }
+                .bar:before, .bar:after{
+                  content:'';
+                  height:2px;
+                  width:0;
+                  bottom:0px;
+                  position:absolute;
+                  background:#000000;
+                  transition:0.2s ease all;
+                  -moz-transition:0.2s ease all;
+                  -webkit-transition:0.2s ease all;
+                }
+                .bar:before {
+                  left:50%;
+                }
+                .bar:after {
+                  right:50%;
+                }
+                .highlight {
+                  position:absolute;
+                  height:60%;
+                  width:100px;
+                  top:25%;
+                  left:0;
+                  pointer-events:none;
+                  opacity:0.5;
+                }
+                @-webkit-keyframes inputHighlighter {
+                  from { background:#5264AE; }
+                  to 	{ width:0; background:transparent; }
+                }
+                @-moz-keyframes inputHighlighter {
+                  from { background:#5264AE; }
+                  to 	{ width:0; background:transparent; }
+                }
+                @keyframes inputHighlighter {
+                  from { background:#5264AE; }
+                  to 	{ width:0; background:transparent; }
                 }
               }
-              &:before{
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                content: '';
-                background-color: #000000;
-                z-index:-1;
-                border-radius: 40px;
+            }
+            p{
+              margin: 0 auto;
+              .submit{
+                margin: 24px auto 24px;
+                display: block;
+                padding: 15px 15px 15px 15px;
+                text-align: center;
+                font-size: 18px;
+                line-height: 23px;
+                width: 267px;
+                border-radius: 27px;
+                background-color: #000;
+                font-family: 'SpectralSC-Regular';
+                font-weight: 500;
+                color: #fff;
+                position: relative;
+                border: none;
                 transition: 0.3s;
-                border: 1px solid #000000;
+                &:hover{
+                  background-color: #fff;
+                  color: #000;
+                  border: 1px solid #000;
+                  &:before{
+                    position: absolute;
+                    top: 4px;
+                    left: 0;
+                    transition: 0.3s;
+                  }
+                }
+                &:before{
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  content: '';
+                  background-color: #000;
+                  z-index:-1;
+                  border-radius: 40px;
+                  transition: 0.3s;
+                  border: 1px solid #000;
+                }
               }
             }
           }
@@ -349,15 +344,16 @@
     .map_content{
       display: flex;
       justify-content: space-between;
+      height: auto;
       .map{
-        height: 800px;
+        height: 720px;
         background-position: center;
         background-repeat: no-repeat;
         width: 55%;
         background-size: cover;
       }
       .form_block{
-        padding: 130px 0 43px;
+        padding: 130px 0 0px;
         width: 45%;
         .container{
           width: 520px;
@@ -373,41 +369,56 @@
             }
             form{
               width: 410px;
-              margin: 43px auto;
+              margin: 43px auto 0;
 
               .input_box{
-                margin: 0 0 34px;
-                input{
-                  border-bottom: 1px solid #000408;
-                  border-right: 0;
-                  border-left: 0;
-                  border-top: 0;
-                  width: 100%;
-                  line-height: 57px;
+                margin: 0 0 72px;
+                &:last-child{
+                  margin: 0 0 35px;
                 }
-                label{
-                  font-family: 'SpectralSC-Regular';
-                  font-size: 18px;
-                  font-weight: 500;
-                  line-height: 20px;
-                  letter-spacing: 3px;
-                  text-transform: uppercase;
-                }
+               .input{
+                 padding: 15px 0 0 0;
+                 input{
+                   border-bottom: 1px solid #000408;
+                   border-right: 0;
+                   border-left: 0;
+                   border-top: 0;
+                   width: 100%;
+
+                 }
+                 textarea{
+                   height: 78px;
+
+                 }
+                 label{
+                   font-family: 'SpectralSC-Regular';
+                   font-size: 20px;
+                   font-weight: 500;
+                   line-height: 20px;
+                   letter-spacing: 3px;
+                   text-transform: uppercase;
+                   top: 7px;
+                 }
+               }
               }
-              button{
-                font-family: 'SpectralSC-Regular';
-                font-size: 24px;
-                font-weight: 500;
-                line-height: 20px;
-                display: block;
-                width: 366px;
-                margin: 31px auto;
-                padding: 26px;
-                text-align: center;
-                color: #fff;
-                border: 0;
-                border-radius: 34px;
-                background-color: #000;
+              p{
+                .submit{
+                  font-family: 'SpectralSC-Regular';
+                  font-size: 22px;
+                  font-weight: 500;
+                  line-height: 23px;
+                  position: relative;
+                  display: block;
+                  width: 370px;
+                  margin: 24px auto;
+                  padding: 25px 10px;
+                  transition: .3s;
+                  text-align: center;
+                  color: #fff;
+                  border: 0;
+                  border-radius: 33px;
+                  background-color: #000;
+                }
               }
             }
           }

@@ -113,7 +113,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
-    padding: 170px 0 230px 0;
+    padding: 170px 0 60px 0;
     .container{
       p{
         text-align: center;
@@ -136,19 +136,6 @@
         display: flex;
         flex-wrap: wrap;
         position: relative;
-        &:after{
-          position: absolute;
-          bottom: 0;
-          top: 128px;
-          height: 164px;
-          width: 284px;
-          content: '';
-          background-image: url(../img/company_logo4.png);
-          background-repeat: no-repeat;
-          background-size: contain;
-          left: 50%;
-          transform: translate(-50%, 10px);
-        }
         li{
 
           color: #ffffff;
@@ -172,11 +159,34 @@
           }
         }
       }
+      .map{
+        position: relative;
+        height: 164px;
+        width: 284px;
+        margin: 0 auto;
+        background-image: url(../img/company_logo6.png);
+        display: block;
+        p{
+          font-family: 'SpectralSC-Regular';
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 26px;
+          position: absolute;
+          top: 60%;
+          left: 50%;
+          color: #ffffff;
+          transform: translate(-50%, -50%);
+          width: 50%;
+          padding: 0;
+        }
+      }
     }
   }
   .specialist{
     background-color: #000000;
     padding: 102px 0 90px;
+    position: relative;
+    z-index: 0;
     .container{
       .title{
         font-family: 'SpectralSC-Regular';
@@ -204,6 +214,7 @@
           width: 253px;
           height: 337px;
           margin: 0 20px 0 0;
+          display: block;
           .img{
             width: 100%;
             height: auto;
@@ -226,6 +237,20 @@
               color: #fff;
             }
           }
+        }
+      }
+      .btn{
+        margin: 50px auto 0;
+        color: #fff;
+        border: 1px solid #fff;
+        background-color: #0b0b0b;
+        width: 290px;
+        border-radius: 31px;
+        font-size: 18px;
+        padding: 21px 10px;
+        font-family: 'SpectralSC-Regular';
+        &:before{
+          border-radius: 31px;
         }
       }
     }
@@ -367,7 +392,7 @@
       }
     }
     .company_banner{
-      padding: 378px 0 270px;
+      padding: 378px 0 100px;
       .container{
         ul{
           justify-content: space-between;

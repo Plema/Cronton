@@ -94,6 +94,17 @@
           }
           .links{
             bottom: 27px;
+            transition: 0.3s;
+            &:before{
+              transition: 0.3s;
+            }
+            &:hover{
+              &:before{
+                color: #fff;
+                background-color: #1c1c1c;
+                border: 1px solid #fff;
+              }
+            }
           }
         }
       }

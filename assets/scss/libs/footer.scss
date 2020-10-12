@@ -9,11 +9,12 @@
   .container{
     .logo{
       margin: 0 auto;
-      img{
+      svg{
         width: 144px;
         height: 69px;
         display: block;
         margin: 0 auto;
+        fill: #ffffff;
       }
     }
     p{
@@ -136,7 +137,7 @@
       width: 1080px;
       .logo{
         width: 100%;
-        img{
+        svg{
           width: 200px;
           height: 93px;
         }

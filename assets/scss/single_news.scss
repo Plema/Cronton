@@ -2,6 +2,7 @@
   .news{
     position: relative;
     padding: 22px 0 0 0;
+    overflow: hidden;
     &:before{
       content: '';
       position: absolute;
@@ -148,6 +149,7 @@
               margin: 0 5px 0 0px;
               padding: 0;
               color: #000408;
+              transition: 0.3s;
               &:before{
                 font-family: 'fontello';
                 font-size: 24px;
@@ -163,6 +165,14 @@
                 text-align: center;
                 line-height: 26px;
                 border: 1px solid #1c1c1c;
+                transition: 0.3s;
+              }
+              &:hover{
+                &:before{
+                  color: #fff;
+                  background-color: #1c1c1c;
+                  border: 1px solid #fff;
+                }
               }
             }
           }

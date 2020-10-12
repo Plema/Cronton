@@ -3,6 +3,7 @@
     padding: 46px 0 46px;
     position: relative;
     overflow: hidden;
+  z-index: 1;
     &:before{
       width: 100%;
       height: 334px;
@@ -10,6 +11,7 @@
       background-color: #000;
       position: absolute;
       top: 0;
+      z-index: -1;
     }
     .container{
       .title{
@@ -23,6 +25,26 @@
         width: 210px;
         margin: 21px 0 0 0px;
         padding: 14px 0;
+        background-color: #FFFFFF;
+        &:before{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          content: '';
+          background: #000;
+          z-index: -1;
+          border-radius: 31px;
+          transition: 0.3s;
+        }
+        &:hover{
+          &:before{
+            position: absolute;
+            top: 4px;
+            transition: 0.3s;
+          }
+        }
       }
 
     }
@@ -42,34 +64,41 @@
 
         }
         .text{
-          padding: 15px 13px 0px 8px;
-          h4{
-            color: #000408;
-            font-family: 'SpectralSC-Regular';
-            font-size: 22px;
-            font-weight: 500;
-            line-height: 28px;
-          }
-          p{
-            color: #000408;
-            font-family: 'Manrope-Regular';
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 30px;
-          }
+          padding: 15px 13px 40px 8px;
+          position: relative;
+         .content{
+           h4{
+             color: #000408;
+             font-family: 'SpectralSC-Regular';
+             font-size: 22px;
+             font-weight: 500;
+             line-height: 28px;
+           }
+           p{
+             color: #000408;
+             font-family: 'Manrope-Regular';
+             font-size: 16px;
+             font-weight: 400;
+             line-height: 30px;
+           }
+         }
           a{
             color: #000408;
             font-family: 'SpectralSC-Regular';
             font-size: 16px;
             font-weight: 500;
             line-height: 36px;
-            position: relative;
+            position: absolute;
+            left: 8px;
+            bottom: 0;
+            transition: 0.3s;
             &:before{
               font-family: 'fontello';
               font-size: 24px;
               position: absolute;
               right: -40px;
-              bottom: 0;
+              top: 50%;
+              transform: translate(0px, -50%);
               width: 26px;
               height: 26px;
               content: '\e800';
@@ -79,6 +108,14 @@
               text-align: center;
               line-height: 26px;
               border: 1px solid #1c1c1c;
+
+            }
+            &:hover{
+              &:before{
+                color: #fff;
+                background-color: #1c1c1c;
+                border: 1px solid #fff;
+              }
             }
           }
         }
@@ -195,10 +232,10 @@
 @media (min-width: 1280px) {
 .case{
       padding: 40px 0 120px;
-      overflow: inherit;
       &:before{
-        width: 40%;
-        height: 670px;
+        width: 42%;
+        min-height: 670px;
+        height: 100%;
       }
       .container{
         .title{
@@ -207,7 +244,7 @@
         .btn{
           font-size: 18px;
           position: absolute;
-          z-index: 2;
+
           bottom: -90px;
           display: block;
           width: 290px;
@@ -218,6 +255,27 @@
           border-radius: 35px;
           background: #000;
           left: 0%;
+          &:before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            content: '';
+            background: #ffffff;
+            z-index: -1;
+            border-radius: 31px;
+            transition: 0.3s;
+            border: 1px solid #ffffff;
+          }
+          &:hover{
+            &:before{
+              position: absolute;
+              top: 4px;
+              transition: 0.3s;
+
+            }
+          }
 
         }
 
@@ -237,22 +295,33 @@
         }
         .slide{
           display: flex;
+          position: relative;
           img{
             width: 650px;
           }
           .text{
-            padding: 50px 10px 10px 37px;
             width: 420px;
-            h4{
-              font-size: 30px;
-              line-height: 35px;
-              padding: 0 23px 0 0;
-            }
-            p{
-              padding: 13px 0px 20px 0;
-            }
+            padding: 10px 10px 40px 37px;
+           .content{
+             overflow: hidden;
+             max-height: 90%;
+             position: absolute;
+             left: 37px;
+             top: 47%;
+             transform: translate(0px, -50%);
+             h4{
+               font-size: 30px;
+               line-height: 35px;
+               padding: 0 23px 0 0;
+             }
+             p{
+               padding: 13px 0px 20px 0;
+               max-height: 155px;
+               overflow: hidden;
+             }
+           }
             a{
-
+              left: 37px;
               &:before{
 
               }
@@ -265,7 +334,7 @@
 @media (min-width: 1400px) {
 .case{
       padding: 40px 0 120px;
-      overflow: inherit;
+
       &:before{
 
       }
@@ -275,9 +344,10 @@
 
       }
       .case_slider{
-        width: 1160px;
+        width: 1140px;
         .slick-slide{
-          width: 1160px;
+
+
         }
         .slide{
 
@@ -293,7 +363,7 @@
 .case{
 
       &:before{
-        height: 740px;
+
       }
       .container{
 
@@ -301,9 +371,9 @@
 
       }
       .case_slider{
-        width: 1280px;
+
         .slick-slide{
-          width: 1280px;
+
         }
         .slide{
           img{
@@ -320,12 +390,11 @@
 @media (min-width: 1920px) {
 .case{
       padding: 65px 0 123px;
-      overflow: inherit;
+
       &:before{
         position: absolute;
         top: 0;
         width: 43%;
-        height: 760px;
         content: '';
         background-color: #000;
         left: 0;
@@ -337,7 +406,7 @@
         .btn{
           font-size: 18px;
           position: absolute;
-          z-index: 2;
+
           bottom: -71px;
           display: block;
           width: 290px;
@@ -353,40 +422,23 @@
 
       }
       .case_slider{
-        width: 1830px;
+
         .slick-slide{
-          width: 1830px;
+
         }
         .slick-arrow{
-          &.prev{
-            left: 667px;
-            right: auto;
-          }
-          &.next{
-            left: 742px;
-            right: auto;
-          }
+
         }
         .slide{
           display: flex;
-          width: 65%;
-          margin: 0 auto;
           img{
             width: 750px;
             height: 475px;
-            margin: 0 0 0 21px;
           }
           .text{
             width: 455px;
-            padding: 105px 0px 0 37px;
-            h4{
-              font-size: 30px;
-              line-height: 35px;
-              padding: 0 23px 0 0;
-            }
-            p{
-              padding: 13px 0px 20px 0;
-            }
+
+
             a{
 
               &:before{

@@ -10,6 +10,9 @@
         padding: 21px 0 26px 0;
       }
       .services_box{
+        .slick-slide{
+          padding: 0 2px;
+        }
         .slick-arrow{
           top: -50px;
           &.next{
@@ -25,17 +28,11 @@
         }
         .box{
           position: relative;
-          padding: 66px 20px 10px 17px;
+          padding: 66px 5px 5px 15px;
           margin: 0px auto 12px;
-          width: 298px;
-          height: 401px;
-          &:hover{
-            span{
-              transition: 1s linear;
-              color: rgba(255, 255, 255, 1);
-              height: 45px;
-            }
-          }
+          width: 300px;
+          height: 450px;
+          overflow: hidden;
           span{
             font-family: 'SpectralSC-Regular';
             font-size: 100px;
@@ -44,8 +41,8 @@
             position: absolute;
             top: 21px;
             left: 19px;
-            color: rgba(0, 0, 0, 0.7);
-            height: 0px;
+            color: rgba(255, 255, 255, 1);
+            height: 45px;
             overflow: hidden;
           }
           h4{
@@ -57,10 +54,10 @@
             min-height: 72px;
           }
           ul{
-            margin: 20px 0 10px 0;
+            margin: 20px 10px 10px 0;
             li{
-              margin: 0 0 11px 0;
-              padding: 0 30px 0 0;
+              width: 100%;
+              margin: 0 0px 11px 0;
               a{
                 color: #ffffff;
                 font-family: 'Manrope-Regular';
@@ -68,22 +65,59 @@
                 font-weight: 500;
                 line-height: 30px;
                 position: relative;
+                cursor: pointer;
+                transition: 0.3s;
                 display: inline;
-                &:before{
-                  font-family: 'fontello';
-                  font-size: 24px;
-                  position: absolute;
-                  right: -40px;
-                  bottom: 0;
+                .icon{
+                  display: inline-block;
                   width: 26px;
                   height: 26px;
-                  content: '\e800';
-                  color: #1c1c1c;
+                  position: relative;
+                  transform: translate(4px, 7px);
                   border-radius: 50%;
-                  background-color: #fff;
-                  text-align: center;
-                  line-height: 26px;
+                  background: #ffffff;
+                  transition: 0.3s;
+                  border: 1px solid #000000;
+                  &:before{
+                    font-family: 'fontello';
+                    font-size: 20px;
+                    position: absolute;
+                    content: '\f107';
+                    color: #000;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%)rotate(-90deg);
+                    transition: 0.3s;
+
+                  }
                 }
+                &:hover{
+                  //border-bottom: 1px solid #ffffff;
+                  transition: 0.3s;
+                  .icon{
+                    background: #000000;
+                    border: 1px solid #ffffff;
+                    &:before{
+                      color: #ffffff;
+                    }
+                  }
+                }
+
+                //&:before{
+                //  font-family: 'fontello';
+                //  font-size: 24px;
+                //  position: absolute;
+                //  right: -40px;
+                //  bottom: 0;
+                //  width: 26px;
+                //  height: 26px;
+                //  content: '\e800';
+                //  color: #1c1c1c;
+                //  border-radius: 50%;
+                //  background-color: #fff;
+                //  text-align: center;
+                //  line-height: 26px;
+                //}
               }
             }
           }
@@ -150,6 +184,7 @@
           justify-content: space-between;
           .slick-slide{
             width: 365px;
+            padding: 0;
           }
           .box{
             width: 350px;
@@ -157,23 +192,18 @@
             height: 500px;
             margin: 0 ;
 
-            &:hover{
-              span{
-                height: 55px;
-              }
-            }
             span{
               font-size: 120px;
               top: 50px;
               left: 40px;
-
+              height: 55px;
               line-height: 65px;
             }
             h4{
               font-size: 34px;
             }
             ul{
-              margin: 90px 0 10px;
+              margin: 50px 0 10px;
               li{
 
                 a{
@@ -199,6 +229,10 @@
   }
 }
 @media (min-width: 1400px) {
+
+
+}
+@media (min-width: 1600px) {
   .wrapper{
     .services{
       .container{
@@ -210,11 +244,6 @@
         }
       }
     }
-  }
-}
-@media (min-width: 1600px) {
-  .wrapper{
-
   }
 }
 @media (min-width: 1920px) {
@@ -232,7 +261,7 @@
             width: 370px;
             padding: 111px 22px 16px 35px;
             ul{
-              margin: 90px 0 10px;
+
               li{
 
                 a{

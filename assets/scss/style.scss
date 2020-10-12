@@ -23,7 +23,7 @@ body {
     font-size: 18px;
     font-weight: 500;
     line-height: 30px;
-    overflow: hidden;
+    //overflow: hidden;
 
 
 }
@@ -102,7 +102,30 @@ input[type="submit"] {
 button {
     cursor: pointer;
 }
-
+.wrapper{
+    padding: 105px 0 0 0;
+}
+.wpcf7{
+    .screen-reader-response{
+        display: none!important;
+        ul{
+            display: none;
+        }
+    }
+    form{
+        .wpcf7-response-output{
+            display: none!important;
+        }
+        .wpcf7-not-valid-tip{
+            color: #FF0000;
+            font-size: 12px;
+            position: absolute;
+        }
+    }
+}
+.submit{
+    cursor: pointer;
+}
 .clearfix {
     &:after {
         content: " ";
@@ -146,9 +169,19 @@ h1 {
 h3 {
 
 }
-
+.wpcf7-not-valid-tip {
+    font-size: 13px;
+    position: absolute;
+    color: red;
+    bottom: -25px;
+}
 h4 {
 
+}
+textarea{
+    resize: none;
+    height: 42px;
+    overflow: hidden;
 }
 .btn{
     width: 204px;
@@ -165,6 +198,7 @@ h4 {
     transition: 0.3s;
     cursor: pointer;
     position: relative;
+
 
 
 }
@@ -387,6 +421,7 @@ h4 {
         font-size: 60px;
     }
     .breadcrumbs{
+        margin: 0 40% 0 0;
         li{
 
             padding: 0 4px 0 0;
@@ -422,5 +457,8 @@ h4 {
 @media (min-width: 1920px) {
     .container {
         width: 1140px;
+    }
+    .wrapper{
+        padding: 128px 0 0 0;
     }
 }

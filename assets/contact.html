@@ -6,14 +6,14 @@
     <title>контакты</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <meta name="cmsmagazine" content="5a7189a28fb3dc68238dbdb44c9ea99c" />
-    <link rel="icon" type="image/png" sizes="16x16" href="../img/header_logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
     <link rel="stylesheet" href="css/style.min.css" data-inprogress="">
     <link rel="stylesheet" href="css/contact.min.css" data-inprogress="">
 </head>
 
 <body>
-<!-- loader -->
-<include src="assets/templates/loader.html"></include>
+<!--&lt;!&ndash; loader &ndash;&gt;-->
+<!--<include src="assets/templates/loader.html"></include>-->
 <!-- Header -->
 <include src="assets/templates/header.html"></include>
 <!-- Основной контент -->
@@ -60,7 +60,8 @@
         </div>
     </section>
     <section class="map_content">
-        <div class="map" style="background-image: url(img/map.png)">
+        <div class="map">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A32d17bc941e407d00ec75bef9ca80e16a4b462b58c16a93279a0176f66106fbf&amp;source=constructor" width="1174" height="720" frameborder="0"></iframe>
         </div>
         <div class="form_block">
             <div class="container">
@@ -69,25 +70,33 @@
                     <p>уже сегодня</p>
                     <form>
                         <div class="input_box">
-                            <input type="text" required>
-                            <span class="highlight"></span>
-                            <span class="bar"></span>
-                            <label>Ваше имя</label>
+                            <div class="input">
+                                <span><input type="text" required class="pp-form"></span>
+                                <code class="highlight"></code>
+                                <code class="bar"></code>
+                                <label>Ваше имя</label>
+                            </div>
 
                         </div>
                         <div class="input_box">
-                            <input class="phone_mask" maxlength="18" required>
-                            <span class="highlight"></span>
-                            <span class="bar"></span>
-                            <label>Телефон</label>
+                            <div class="input">
+                                <span><input type="tel" class="phone_mask pp-form" maxlength="18" required ></span>
+                                <code class="highlight"></code>
+                                <code class="bar"></code>
+                                <label>Телефон</label>
+                            </div>
                         </div>
                         <div class="input_box">
-                            <textarea required></textarea>
-                            <span class="highlight"></span>
-                            <span class="bar"></span>
-                            <label>Ваш вопрос</label>
+                            <div class="input">
+                                <span><textarea type="text" required class="pp-form"></textarea></span>
+                                <code class="highlight"></code>
+                                <code class="bar"></code>
+                                <label>Ваш вопрос</label>
+                            </div>
                         </div>
-                        <button class="submit">Заказать услуги</button>
+                        <p>
+                            <button class="submit">Заказать услуги</button>
+                        </p>
                     </form>
                 </div>
             </div>
